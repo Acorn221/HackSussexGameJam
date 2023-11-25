@@ -1,14 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
-@import '@animxyz/core';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@include xyz-all;
 
 body {
 	margin: 0;
 	font-family: 'IBM Plex Mono', monospace;
-	background-color: #151f38;
+
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	background-image: url('../assets/backgroundImage.png');
+	background-repeat: repeat;
+	animation: hueRotate 5s infinite linear;
+}
+
+@keyframes hueRotate {
+	from {
+			filter: hue-rotate(0deg);
+	}
+	to {
+			filter: hue-rotate(360deg);
+	}
 }

@@ -1,24 +1,9 @@
-import React from 'react';
-import { XyzTransitionGroup } from '@animxyz/react';
-
-import './index.css';
 import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from './auth/LoginButton';
+import '@/index.css';
 
 const App = () => {
-  const [count, setCount] = React.useState(0);
-  const [showCount, setShowCount] = React.useState(true);
   const { user, isAuthenticated, isLoading } = useAuth0();
-
-  const increment = () => {
-    setShowCount(false);
-    setTimeout(() => {
-      requestAnimationFrame(() => {
-        setShowCount(true);
-        setCount(count + 1);
-      });
-    }, 150);
-  };
 
   return (
     <div className="flex justify-center align-middle h-screen">
