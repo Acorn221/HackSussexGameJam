@@ -19,7 +19,7 @@ body::before {
 	height: 100%;
 	width: 100%;
 	z-index: -1;
-	background-image: url('../assets/backgroundImage.png');
+	background-image: url('../assets/longCube.png');
 	background-repeat: repeat;
 	animation: hueRotate 5s infinite linear;
 }
