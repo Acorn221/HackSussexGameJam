@@ -22,54 +22,35 @@ const App = () => {
 
   return (
     <div className="flex justify-center align-middle h-screen">
-      <div className="bg-white text-black m-auto p-10 rounded-xl w-3/4 md:w-1/2 text-center">
-        <div className="underline text-5xl">Hello World</div>
-        <div className="flex justify-center m-5">
-          <button className="text-2xl m-auto w-full p-5 rounded-2xl flex" onClick={() => increment()}>
-            <div className="flex-initial">
-              Click Count:
-            </div>
-            <XyzTransitionGroup xyz="fade down-100% back-2" duration={150} className="flex-1">
-              {showCount && (
-              <div>
-                {count}
-              </div>
-              )}
-            </XyzTransitionGroup>
-          </button>
-        </div>
-        <div className="m-5 text-left">
-          <div className="underline text-2xl mb-3">
-            This Template Uses:
+      <div className="bg-white text-black m-auto p-10 rounded-xl w-3/4 md:w-1/2 text-center flex flex-col">
+        <div className="flex-auto flex align-middle">
+          <div className="flex-1" />
+          <div className="flex gap-4 justify-cemter align-middle">
+            {
+          (!isLoading && !isAuthenticated) && (
+          <>
+            <p className="m-auto">Please login to continue</p>
+            <LoginButton />
+          </>
+          ) || user && isAuthenticated && (
+            <>
+              <h2 className="m-auto">
+                Hi
+                {' '}
+                {user.name}
+              </h2>
+              <img className="rounded-full h-12 w-12" src={user.picture} alt={user.name} />
+            </>
+          )
+        }
           </div>
-          <ul>
-            <li>○ Yarn</li>
-            <li>○ Typescript</li>
-            <li>○ React</li>
-            <li>○ Tailwind</li>
-            <li>○ Absolute Paths (@/components/MyComponent)</li>
-            <li>○ Vite</li>
-            <li>○ Github Pages, For Easy Deployment</li>
-            <li>○ Eslint</li>
-          </ul>
         </div>
-        {
-          !isLoading && !isAuthenticated && (
-            <div>
-              <p>Please login to continue</p>
-              <LoginButton />
-            </div>
-          )
-        }
-        {
-          user && isAuthenticated && (
-            <div>
-              <img src={user.picture} alt={user.name} />
-              <h2>{user.name}</h2>
-              <p>{user.email}</p>
-            </div>
-          )
-        }
+        <div className="underline text-5xl">Retro Rubiks</div>
+        <div className="flex-1 flex justify-center align-middle flex-col min-h-[30em]">
+          <div className="m-auto text-3xl">
+            INSERT GAME HERE
+          </div>
+        </div>
       </div>
     </div>
   );
