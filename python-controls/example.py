@@ -73,18 +73,18 @@ async def main(address, char_uuid):
                 anticlockwise = True if valhex[-3] == 3 else False
                 if valhex[-4] == 2:
                     if anticlockwise: # yellow side clockwise/anticlockwise
-                        pyautogui.typewrite('d')
+                        pyautogui.write('d')
                     else:
-                        pyautogui.typewrite('a')
+                        pyautogui.write('a')
 
                 if valhex[-4] == 6:
                     if anticlockwise: # green side forward/backward (red facing user, white facing)
-                        pyautogui.typewrite('w')
+                        pyautogui.write('w')
                     else:
-                        pyautogui.typewrite('s')
+                        pyautogui.write('s')
 
             else:
-                await asyncio.sleep(0.1)
+                await asyncio.sleep(0.001)
 
             if END == True:
                 break
@@ -93,4 +93,3 @@ async def main(address, char_uuid):
 
 if __name__ == "__main__":
     asyncio.run(main(ble_address,receive_UUID))
-da
