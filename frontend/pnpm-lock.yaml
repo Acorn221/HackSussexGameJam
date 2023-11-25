@@ -11,6 +11,9 @@ dependencies:
   '@animxyz/react':
     specifier: ^0.6.7
     version: 0.6.7(react-dom@18.2.0)(react@18.2.0)
+  '@auth0/auth0-react':
+    specifier: ^2.2.3
+    version: 2.2.3(react-dom@18.2.0)(react@18.2.0)
   '@babel/core':
     specifier: ^7.23.3
     version: 7.23.3
@@ -130,6 +133,21 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.2.0)
+    dev: false
+
+  /@auth0/auth0-react@2.2.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-3B0KA/ky1yA6iQK8045N8U0ZBkmDB3ElCSwJuxNbAoKmZBc4+DjzZhWRxYsgb9PrfHC14Lr2h4950A3PEFDULA==}
+    peerDependencies:
+      react: ^16.11.0 || ^17 || ^18
+      react-dom: ^16.11.0 || ^17 || ^18
+    dependencies:
+      '@auth0/auth0-spa-js': 2.1.2
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@auth0/auth0-spa-js@2.1.2:
+    resolution: {integrity: sha512-xdA65Z/U7++Y7L9Uwh8Q8OVOs6qgFz+fb7GAzHFjpr1icO37B//xdzLXm7ZRgA19RWrsNe1nme3h896igJSvvw==}
     dev: false
 
   /@babel/code-frame@7.23.4:

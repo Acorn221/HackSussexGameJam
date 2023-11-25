@@ -1,5 +1,5 @@
 {
-  "name": "Template-Project",
+  "name": "RetroRubiks",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -11,6 +11,7 @@
   "dependencies": {
     "@animxyz/core": "^0.6.6",
     "@animxyz/react": "^0.6.7",
+    "@auth0/auth0-react": "^2.2.3",
     "@babel/core": "^7.23.3",
     "@egjs/react-flicking": "^4.11.1",
     "@emotion/react": "^11.11.1",
