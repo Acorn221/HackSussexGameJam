@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/GameJamUnityFiles/[Ll]ibrary/
-/GameJamUnityFiles/[Tt]emp/
-/GameJamUnityFiles/[Oo]bj/
-/GameJamUnityFiles/[Bb]uild/
-/GameJamUnityFiles/[Bb]uilds/
-/GameJamUnityFiles/[Ll]ogs/
-/GameJamUnityFiles/[Uu]ser[Ss]ettings/
+/GameJamUnityFiles/GameJam/[Ll]ibrary/
+/GameJamUnityFiles/GameJam/[Tt]emp/
+/GameJamUnityFiles/GameJam/[Oo]bj/
+/GameJamUnityFiles/GameJam/[Bb]uild/
+/GameJamUnityFiles/GameJam/[Bb]uilds/
+/GameJamUnityFiles/GameJam/[Ll]ogs/
+/GameJamUnityFiles/GameJam/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
