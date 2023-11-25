@@ -9,7 +9,7 @@ module.exports = {
     baseUrl: 'src/',
   },
   theme: {},
-  plugins: [],
+  plugins: [require('daisyui')],
   include: [
     'src',
     'types',

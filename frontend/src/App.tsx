@@ -1,8 +1,9 @@
 import React from 'react';
 import { XyzTransitionGroup } from '@animxyz/react';
 
-import '@/index.css';
+import './index.css';
 import { useAuth0 } from '@auth0/auth0-react';
+import LoginButton from './auth/LoginButton';
 
 const App = () => {
   const [count, setCount] = React.useState(0);
@@ -21,10 +22,10 @@ const App = () => {
 
   return (
     <div className="flex justify-center align-middle h-screen">
-      <div className="bg-white m-auto p-10 rounded-xl w-3/4 md:w-1/2 text-center">
+      <div className="bg-white text-black m-auto p-10 rounded-xl w-3/4 md:w-1/2 text-center">
         <div className="underline text-5xl">Hello World</div>
         <div className="flex justify-center m-5">
-          <button className="text-2xl m-auto w-full bg-slate-200 hover:bg-slate-300 p-5 rounded-2xl flex" onClick={() => increment()}>
+          <button className="text-2xl m-auto w-full p-5 rounded-2xl flex" onClick={() => increment()}>
             <div className="flex-initial">
               Click Count:
             </div>
@@ -52,6 +53,14 @@ const App = () => {
             <li>○ Eslint</li>
           </ul>
         </div>
+        {
+          !isLoading && !isAuthenticated && (
+            <div>
+              <p>Please login to continue</p>
+              <LoginButton />
+            </div>
+          )
+        }
         {
           user && isAuthenticated && (
             <div>

@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 declare module '*.scss' {
   const css: { [key: string]: string };
   export default css;
