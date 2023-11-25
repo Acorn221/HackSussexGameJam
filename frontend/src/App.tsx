@@ -2,10 +2,12 @@ import React from 'react';
 import { XyzTransitionGroup } from '@animxyz/react';
 
 import '@/index.css';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const App = () => {
   const [count, setCount] = React.useState(0);
   const [showCount, setShowCount] = React.useState(true);
+  const { user, isAuthenticated, isLoading } = useAuth0();
 
   const increment = () => {
     setShowCount(false);
@@ -50,6 +52,15 @@ const App = () => {
             <li>○ Eslint</li>
           </ul>
         </div>
+        {
+          user && isAuthenticated && (
+            <div>
+              <img src={user.picture} alt={user.name} />
+              <h2>{user.name}</h2>
+              <p>{user.email}</p>
+            </div>
+          )
+        }
       </div>
     </div>
   );
