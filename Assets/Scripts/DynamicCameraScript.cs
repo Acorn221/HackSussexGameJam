@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DynamicCameraMovement : MonoBehaviour
+public class DynamicCameraScript : MonoBehaviour
 {
     public Transform target; // The player's transform
     public float smoothTime = 0.3f; // Smoothing time for camera movement
