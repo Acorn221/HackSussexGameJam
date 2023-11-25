@@ -71,14 +71,17 @@ async def main(address, char_uuid):
                 valhex = toHexVal(value, key)
                 print(valhex)
                 anticlockwise = True if valhex[-3] == 3 else False
-                if valhex[-4] == 1:
-                    pyautogui.typewrite(' ')
+                if valhex[-4] == 2:
+                    if anticlockwise:
+                        pyautogui.typewrite('d')
+                    else:
+                        pyautogui.typewrite('a')
 
                 if valhex[-4] == 6:
                     if anticlockwise:
-                        pyautogui.typewrite('[')
+                        pyautogui.typewrite('w')
                     else:
-                        pyautogui.typewrite(']')
+                        pyautogui.typewrite('s')
 
             else:
                 await asyncio.sleep(0.1)
