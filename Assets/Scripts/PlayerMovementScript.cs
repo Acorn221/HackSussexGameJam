@@ -20,13 +20,13 @@ public class PlayerMovementScript : MonoBehaviour
     {
 
         if (movingHorizontal){
-            if (Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 1f, obstacleMask) || Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 1f, obstacleMask)) {
+            if (Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 1.1f, obstacleMask) || Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 1.1f, obstacleMask)) {
                 canCheck = true;
             } else {
                 canCheck = false;
             }
         } else {
-            if (Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.up), 1f, obstacleMask) || Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.down), 1f, obstacleMask)) {
+            if (Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.up), 1.1f, obstacleMask) || Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.down), 1.1f, obstacleMask)) {
                 canCheck = true;
             } else {
                 canCheck = false;
@@ -35,7 +35,7 @@ public class PlayerMovementScript : MonoBehaviour
 
         Debug.Log(canCheck);
 
-        if (canCheck)
+        if (true)
         {
 
             if (Input.GetAxisRaw("Horizontal") != 0 && canMove()){

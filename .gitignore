@@ -12,6 +12,7 @@
 /GameJamUnityFiles/GameJam/[Aa]ssets/
 /GameJamUnityFiles/GameJam/[Pp]rojectSettings/
 
+/Library/PackageCache/
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
