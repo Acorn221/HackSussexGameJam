@@ -16,10 +16,10 @@ const App = () => {
   const [score, setScore] = useState(0);
 
   const { unityProvider } = useUnityContext({
-    loaderUrl: '/assets/game/build/myunityapp.loader.js',
-    dataUrl: '/assets/game/build/myunityapp.data',
-    frameworkUrl: '/assets/game/build/myunityapp.framework.js',
-    codeUrl: '/assets/game/build/myunityapp.wasm',
+    loaderUrl: 'game/build/myunityapp.loader.js',
+    dataUrl: 'game/build/myunityapp.data',
+    frameworkUrl: 'game/build/myunityapp.framework.js',
+    codeUrl: 'game/build/myunityapp.wasm',
   });
 
   const submitScore = async (score: number) => {
@@ -74,7 +74,7 @@ const App = () => {
         }
           </div>
         </div>
-
+        <Unity unityProvider={unityProvider} />
         <div className="flex-1 flex justify-center align-middle flex-col min-h-[30em]">
           {(!isLoading && !isAuthenticated) ? (
             <>
@@ -82,7 +82,7 @@ const App = () => {
               <LoginButton />
             </>
           ) : (
-            <iframe src="/assets/game/index.html" title="game" className="flex-1 overflow-hidden" />
+            <iframe src="/game/index.html" title="game" className="flex-1 overflow-hidden" />
           )}
         </div>
       </div>
