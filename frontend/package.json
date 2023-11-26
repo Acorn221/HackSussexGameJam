@@ -9,8 +9,6 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@animxyz/core": "^0.6.6",
-    "@animxyz/react": "^0.6.7",
     "@auth0/auth0-react": "^2.2.3",
     "@babel/core": "^7.23.3",
     "@egjs/react-flicking": "^4.11.1",
