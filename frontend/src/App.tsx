@@ -1,10 +1,13 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from './auth/LoginButton';
 import Logo from '../assets/chair v2_scaled_32x_pngcrushed.png';
 import '@/index.css';
 
 const App = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const {
+    user, isAuthenticated, isLoading, logout,
+  } = useAuth0();
 
   return (
     <div className="flex justify-center align-middle h-screen">
@@ -23,7 +26,12 @@ const App = () => {
               <h2 className="m-auto text-xl">
                 {user.name}
               </h2>
-              <img className="rounded-full h-12 w-12 m-auto" src={user.picture} alt={user.name} />
+              <img
+                className="rounded-full h-12 w-12 m-auto"
+                src={user.picture}
+                alt={user.name}
+                onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+              />
             </>
             )
         }
